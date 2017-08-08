@@ -1,0 +1,131 @@
+-- add thu vien map cho ios voi android
+https://www.npmjs.com/package/react-native-maps-google
+
+-- get color
+http://flatuicolors.com/
+— map
+https://github.com/airbnb/react-native-maps/blob/1e71a21f39e7b88554852951f773c731c94680c9/docs/installation.md#ios
+--icon
+http://ionicframework.com/docs/ionicons/
+
+https://github.com/oblador/react-native-vector-icons
+
+--getlocation 
+https://www.youtube.com/watch?v=MqLC0kOqrwk
+---
+gps.xtracking.vn ten dang nhap: anhtuan Mat khau: 12345678
+--anh chiến 01667654063
+-- actionButton
+https://github.com/mastermoo/react-native-action-button
+-- create login 
+https://www.youtube.com/watch?v=1xu1eeRCPEk
+
+--thu vien tao listview custom button icon ...
+https://github.com/react-native-training/react-native-elements
+https://www.youtube.com/watch?v=r-ENJLGrd3s
+
+--
+https://stackoverflow.com/questions/16427421/how-to-remove-cocoapods-from-a-project
+==Remove pod==
+
+Install deintegrate and clean:
+$ sudo gem install cocoapods-deintegrate
+$ sudo gem install cocoapods-clean
+Run deintegrate in the folder of the project:
+
+$ pod deintegrate
+Clean:
+
+$ pod clean
+Modify your podfile (delete the lines with the pods you don't want to use anymore) and run:
+
+$ pod install
+
+--------
+redux react
+red
+----
+https://www.youtube.com/watch?v=uN0FRWk-YW8
+
+---
+https://www.npmjs.com/package/react-native-global-event-emitter
+
+-- cách dung redux
+tải thử viên redux 
+npm install redux --save
+khởi tao redux
+improt redux from 'redux'
+-- toán tử copy trong rexdux  là ...
+-- pure function có 2 tham số truyền vào stateOld, và các action và phải thoả mãn 3 điều kiện
+    + không được thay đổi dữ liệu bên ngoài
+    + không được thay đổi giá trị của một object truyền vào
+    + one input --> one output
+ví dụ: 
+var reducer = (stater, action) => {
+    ở đây sử lý sự kiện rồi return ra kết quả
+}
+--khởi tao một store
+var store = redux.createStore(truyền vào một pure function)
+--lắng nghe khi stateOld thay đổi
+store.subscribe({() => console.log('ádaads')});
+-- lấy nội dung state thì store.getState()
+-- thực hiện một hành động một store 
+    store.dispatch({
+        type:'TYPE_LÀ_GÌ'
+        Key:'ádadsas'
+    })
+
+-- chi nhỏ function reducer , trong redux reducer có bao nhêu thuộc tính thì chia bấy nhiêu pure func ra và gộp lại bằng 
+redux.combineReducers({
+    các thuộc tính của reducer
+})
+-- chia sẻ store kết nối các component
+npm install react-redux --save
+modun.exprot = store
+Gọi Provider ra từ react-redux
+
+<Provider store={tên store}>
+   // các component tron component khai bảo connect từ thư viện react-redux
+   //từ các component dùng modun.exprot = connect(function(state) {
+       return thông tin từ state mà state tướng ứng với giá trị store được truyền vào
+   })(tra ve cái component đó)
+</Provider> 
+
+---redux---
+https://www.youtube.com/watch?v=C7v1RuW-UxQ
+.-------Xoay hinh anh trong react native------
+https://www.npmjs.com/package/react-native-image-rotate
+--------
+https://www.youtube.com/watch?v=Xcny1Zrqi-k&list=PLzrVYRai0riQFEN586LOz3eMv2Rgy6WXS&index=15
+https://facebook.github.io/react-native/docs/asyncstorage.html
+https://www.youtube.com/watch?v=eBhgwJH5SrQ
+
+---------- lay dia chi
+http://maps.googleapis.com/maps/api/geocode/json?latlng=20.801366806030273,105.61397552490234&sensor=true
+
+-----Key Map------
+key = AIzaSyC2uFyRPWPOAHdXM4Zoqze394NKNRBj2jc
+
+---Map----
+ <View style={{flex:1}} > 
+                        <MapView 
+                        style={{flex:1, backgroundColor: '#f3f3f3', top:20}} 
+                        initialRegion={this.state.initiPostion}
+                        Provider = {PROVIDER_GOOGLE}> 
+                        <MapView.Marker 
+                          draggable
+                          
+                          coordinate={this.state.markerPostion} 
+                          onDragEnd = {(position) => 
+                                          this.setState({markerPostion: position.nativeEvent.coordinate}) 
+                                          //Alert.alert('thong Bao',JSON.stringify(position.nativeEvent.coordinate),[title = 'OK'])
+                                          }>
+                         <MarkerCustom/>
+                             {/*<Icon name='md-pin' style={{fontSize:30, color:'red'}}/>*/}
+                        </MapView.Marker>
+                    </MapView>
+                    <ButtonMenuAction/>
+                </View>
+
+
+

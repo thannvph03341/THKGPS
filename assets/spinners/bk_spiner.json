@@ -1,0 +1,30 @@
+{"frames": [
+
+{
+	"filename": "ic_bike.png",
+	"frame": {"x":0,"y":0,"w":54,"h":114},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":114},
+	"sourceSize": {"w":54,"h":114},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "ic_fixed_fare.png",
+	"frame": {"x":54,"y":0,"w":72,"h":129},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":129},
+	"sourceSize": {"w":72,"h":129},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bk_spiner.png",
+	"format": "RGBA8888",
+	"size": {"w":126,"h":129},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:1aa2f82ca10b7bbd9db84a40a9b1ccda:72d30bf1a12a395b943810766aef1bc8:6a3385de5bfa9e37ab2952d4b3ff61a4$"
+}
+}
